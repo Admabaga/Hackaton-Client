@@ -1,0 +1,23 @@
+.company-select-container {
+  max-width: 700px;
+  justify-content: center !important;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f5f7fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ .company-select-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #333;
+ }
+ .company-select-dropdown {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 24px;
+ }
