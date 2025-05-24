@@ -23,7 +23,7 @@ export default function NavBar() {
                         </button>
                     </div>
                     <div className="d-none d-lg-flex flex-column align-items-center w-100 desktop-header">
-                        <a className="navbar-brand mb-4" href="/lobby">Solaris IQ</a>
+                        <a className="navbar-brand mb-4" >HACKATON PROJECT</a>
                     </div>
                     <div className={`mobile-menu ${mobileMenuOpen ? 'show' : ''} d-lg-none w-100`}>
                         <ul className="navbar-nav flex-column w-100">
@@ -51,38 +51,28 @@ export default function NavBar() {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive ? "nav-link active" : "nav-link"
+                                <div
+                                    className={location.pathname.startsWith('/actions')
+                                        ? "nav-link active pe-none"
+                                        : "nav-link pe-none"
                                     }
-                                    to="/actions"
-                                    end
+                                    style={{ cursor: 'default' }}
                                 >
-                                    <i className="bi bi-buildings me-2"></i> Novedades
-                                </NavLink>
+                                    <i className={`bi bi-megaphone-fill text-warning me-2 ${location.pathname.startsWith('/actions') ? "text-primary" : ""}`}></i>
+                                    Novedades
+                                </div>
                             </li>
                             <li className="nav-item">
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive ? "nav-link active" : "nav-link"
+                                <div
+                                    className={location.pathname.startsWith('/documents')
+                                        ? "nav-link active pe-none"
+                                        : "nav-link pe-none"
                                     }
-                                    to="/documents"
-                                    end
+                                    style={{ cursor: 'default' }}
                                 >
-                                    <i className="bi bi-buildings me-2"></i> Documentos
-                                </NavLink>
-                            </li>
-                            <li className="nav-item logout-item">
-                                <button
-                                    className="nav-link logout-btn"
-                                    onClick={() => {
-                                        setShowLogoutModal(true);
-                                        setMobileMenuOpen(false);
-                                    }}
-                                >
-                                    <i className="bi bi-box-arrow-right me-2"></i>
-                                    Cerrar sesión
-                                </button>
+                                    <i className={`bi bi-file-earmark-text-fill me-2 ${location.pathname.startsWith('/documents') ? "text-primary" : ""}`}></i>
+                                    Documentos
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -110,28 +100,29 @@ export default function NavBar() {
                                     <i className="bi bi-buildings me-2"></i> Compañias
                                 </NavLink>
                             </li>
-                                                        <li className="nav-item">
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive ? "nav-link active" : "nav-link"
+                            <li className="nav-item">
+                                <div
+                                    className={location.pathname.startsWith('/actions')
+                                        ? "nav-link active pe-none"
+                                        : "nav-link pe-none"
                                     }
-                                    to="/actions"
-                                    end
+                                    style={{ cursor: 'default' }}
                                 >
-                                    <i className="bi bi-buildings me-2"></i> Novedades
-                                </NavLink>
+                                    <i className={`bi bi-megaphone-fill text-warning me-2 ${location.pathname.startsWith('/actions') ? "text-primary" : ""}`}></i>
+                                    Novedades
+                                </div>
                             </li>
                             <li className="nav-item">
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive ? "nav-link active" : "nav-link"
+                                <div
+                                    className={location.pathname.startsWith('/documents')
+                                        ? "nav-link active pe-none"
+                                        : "nav-link pe-none"
                                     }
-                                    to="/documents"
-                                    end
-                                    tabIndex="-1"
+                                    style={{ cursor: 'default' }}
                                 >
-                                    <i className="bi bi-buildings me-2"></i> Documentos
-                                </NavLink>
+                                    <i className={`bi bi-file-earmark-text-fill me-2 ${location.pathname.startsWith('/documents') ? "text-primary" : ""}`}></i>
+                                    Documentos
+                                </div>
                             </li>
                         </ul>
                     </div>

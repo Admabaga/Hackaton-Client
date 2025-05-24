@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import Action from '../Components/Common/Cards/Action/Action.jsx'
 import Home from '../Components/Pages/Home/Home.jsx'
-import Profile from '../Components/Pages/Company/ProcessByCompany.jsx'
+import ProcessByCompany from '../Components/Pages/Company/ProcessByCompany.jsx'
 import Document from '../Components/Common/Cards/Document/Document.jsx'
 
 export default function AppRoutes() {
@@ -19,7 +19,7 @@ export default function AppRoutes() {
             />
             <Routes>
                 <Route path="/" element={<Home />} ></Route>
-                <Route path="/companies" element={<Profile />}></Route>
+                <Route path="/companies" element={<ProcessByCompany />}></Route>
                 <Route path="/actions/:processId" element={<Action />} />
                 <Route path="/documents/:actionId" element={<Document />} />
             </Routes>

@@ -4,7 +4,7 @@ import ApiClient from '../../../../Util/ApiClient/ApiClient.jsx'
 import { toast } from 'react-hot-toast'
 import NavBar from '../../Nav/Nav.jsx'
 import { useParams } from 'react-router-dom'
-import './Document.css'
+import '../GetCompanies/Process.css'
 
 const Document = () => {
     const { actionId } = useParams()
@@ -42,8 +42,8 @@ const Document = () => {
             <div className="app-container">
                 <NavBar />
                 <div className="content-container">
-                    <div className="documents-container">
-                        <h4 className="documents-title">Documentos de la Novedad: </h4>
+                    <div className="processes-container">
+                        <h4 className="processes-title">Documentos de la Novedad: </h4>
                         {loadingDocuments ? (
                             <div className="d-flex justify-content-center">
                                 <div className="spinner-border" role="status" aria-label="Cargando..."></div>
@@ -52,7 +52,7 @@ const Document = () => {
                         ) : errorDocuments ? (
                             <p className="text-danger text-center">{errorDocuments}</p>
                         ) : documents.length > 0 ? (
-                            <table className="documents-table">
+                            <table className="processes-table">
                                 <thead>
                                     <tr>
                                         <th>ID </th>

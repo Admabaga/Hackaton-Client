@@ -216,3 +216,16 @@
   max-height: 1000px;
   transition: max-height 0.5s ease-in;
 }
+
+.nav-link.pe-none {
+  pointer-events: none;
+}
+.nav-link.pe-none.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background-color: #73b66d;
+}
